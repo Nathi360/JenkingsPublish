@@ -9,18 +9,13 @@ pipeline {
         }
         stage('B U I L D') {
             steps {
-                bat 'npm build --prod'
+                bat 'npm run-script build --prod'
             }
         }
         stage('T R A N S F E R') {
             steps {
                 //Copy '/dist' to CPANEL here!
                 bat 'dir'
-            }
-        }
-        stage('T E S T') {
-            steps {
-                bat 'npm e2e'
             }
         }
     }
