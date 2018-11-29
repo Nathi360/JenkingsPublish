@@ -2,7 +2,7 @@ pipeline {
     agent any
     
     stages {
-		stage('S E T U P') {
+		    stage('S E T U P') {
             steps {
                 bat 'npm install'
             }
@@ -14,7 +14,7 @@ pipeline {
         }
         stage('T E S T') {
             steps {
-                ng test
+                bat 'ng test'
             }
         }
         stage('T R A N S F E R') {
