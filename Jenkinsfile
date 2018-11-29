@@ -2,7 +2,7 @@ pipeline {
     agent any
     
     stages {
-		stage('S E T U P') {
+		    stage('S E T U P') {
             steps {
                 bat 'npm install'
             }
@@ -12,15 +12,15 @@ pipeline {
                 bat 'npm build --prod'
             }
         }
-        stage('T E S T') {
-            steps {
-                bat 'npm test'
-            }
-        }
         stage('T R A N S F E R') {
             steps {
                 //Copy '/dist' to CPANEL here!
                 bat 'dir'
+            }
+        }
+        stage('T E S T') {
+            steps {
+                bat 'npm e2e'
             }
         }
     }
