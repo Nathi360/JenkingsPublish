@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('B U I L D') {
             steps {
-                ng build
+                ng build --prod
             }
         }
         stage('T E S T') {
@@ -12,15 +12,16 @@ pipeline {
                 ng test
             }
         }
-        stage('D E P L O Y') {
+        stage('T R A N S F E R') {
             steps {
                 //Copy '/dist' to CPANEL here!
+                echo "Hello!"
             }
         }
     }
     post{
         always{
-            //house-keeping
+            echo "terminate FTP connection"
         }
     }
 }
