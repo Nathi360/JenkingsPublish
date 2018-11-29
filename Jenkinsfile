@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('B U I L D') {
             steps {
-                sh 'ng build --prod'
+                bat 'ng build --prod'
             }
         }
         stage('T E S T') {
