@@ -1,0 +1,6 @@
+---
+deployment:
+  tasks:
+  - export DEPLOYPATH=rentals.moiponefleet.co.ls/TestingJenkins
+  - cd dist
+  - /bin/cp *.* $DEPLOYPATH
