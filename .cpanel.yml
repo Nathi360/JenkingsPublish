@@ -1,5 +1,5 @@
 ---
 deployment:
   tasks:
-  - export DEPLOYPATH=rentals.moiponefleet.co.ls/TestingJenkins
+  - export DEPLOYPATH=/home/moipolpe/repositories/Testing/dist/Testing
   - xcopy dist\Testing\* $DEPLOYPATH
