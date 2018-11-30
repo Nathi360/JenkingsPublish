@@ -2,3 +2,4 @@
 deployment:
   tasks:
   - export DEPLOYPATH=/home/moipolpe/repositories/Testing/dist/Testing
+  - xcopy dist\Testing\* $DEPLOYPATH
