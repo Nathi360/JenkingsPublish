@@ -4,6 +4,7 @@ pipeline {
     stages {
 		stage('S E T U P') {
             steps {
+				bat 'npm install -g @angular/cli'
                 bat 'npm install'
             }
         }
@@ -17,7 +18,7 @@ pipeline {
                 bat 'npm e2e'
             }
         }
-        stage('T R A N S F E R') {
+        stage('C H E C K') {
             steps {
                 //Copy '/dist' to CPANEL here!
                 bat 'dir'
